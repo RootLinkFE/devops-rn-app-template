@@ -1,6 +1,5 @@
 # devops-rn-app
 
-[![build workflow](https://github.com/RootLinkFE/devops-rn-app/actions/workflows/build.yml/badge.svg)](https://github.com/RootLinkFE/devops-rn-app/actions/workflows/build.yml)
 [![Android](https://github.com/RootLinkFE/devops-rn-app/actions/workflows/manually-build-android.yml/badge.svg)](https://github.com/RootLinkFE/devops-rn-app/actions/workflows/manually-build-android.yml)
 [![IOS](https://github.com/RootLinkFE/devops-rn-app/actions/workflows/manually-build-ios.yml/badge.svg)](https://github.com/RootLinkFE/devops-app/actions/workflows/manually-build-ios.yml)
 
