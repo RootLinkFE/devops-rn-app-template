@@ -1,7 +1,7 @@
 # devops-rn-app
 
 [![Android](https://github.com/RootLinkFE/devops-rn-app/actions/workflows/manually-build-android.yml/badge.svg)](https://github.com/RootLinkFE/devops-rn-app/actions/workflows/manually-build-android.yml)
-[![IOS](https://github.com/RootLinkFE/devops-rn-app/actions/workflows/manually-build-ios.yml/badge.svg)](https://github.com/RootLinkFE/devops-app/actions/workflows/manually-build-ios.yml)
+[![IOS](https://github.com/RootLinkFE/devops-rn-app/actions/workflows/manually-build-ios.yml/badge.svg)](https://github.com/RootLinkFE/devops-rn-app/actions/workflows/manually-build-ios.yml)
 
 利用 Action 构建私库 gitlab rn app 代码
 
