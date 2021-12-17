@@ -65,10 +65,10 @@ jobs:
 
       - uses: yukiarrr/ios-build-action@v1.4.0
         with:
-          project-path: ios/g_service.xcodeproj
-          workspace-path: ios/g_service.xcworkspace
-          p12-path: ios/Certificates.p12
-          mobileprovision-path: ios/tieniu.mobileprovision
+          project-path: ios/app.xcodeproj
+          workspace-path: ios/app.xcworkspace
+          p12-path: ios/app.p12
+          mobileprovision-path: ios/app.mobileprovision
           # p12-base64: ${{ secrets.P12_BASE64 }}
           # p12-cer-base64: ${{ secrets.P12_CER_BASE64 }}
           # mobileprovision-base64: ${{ secrets.MOBILEPROVISION_BASE64 }}
@@ -101,7 +101,7 @@ jobs:
           node ./send-msg.js "IOS同步到蒲公英平台失败。请检查错误重新执行或前往Action直接下载ipa文件 \n>[Job RunId](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})" "${{ github.event.inputs.buildBranch }}"
       - name: Send finally notify
         run: |
-          node ./send-msg.js "IOS构建成功，并同步到蒲公英平台。\n>[Job Link](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) \n>蒲公英地址:[https://www.pgyer.com/dev-tie-ipa](https://www.pgyer.com/dev-tie-ipa)" "${{ github.event.inputs.buildBranch }}"
+          node ./send-msg.js "IOS构建成功，并同步到蒲公英平台。\n>[Job Link](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) \n>蒲公英地址:[https://www.pgyer.com/xxxxx](https://www.pgyer.com/xxxxx)" "${{ github.event.inputs.buildBranch }}"
       - name: On Failure
         if: ${{ failure() }}
         run: |

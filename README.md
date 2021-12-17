@@ -11,20 +11,28 @@
 ## 使用
 
 - 1、通过模板的方式引用此模板创建工程
-- 2、修改 `./checkout.sh` 文件内工程名称
-- 3、配置 Secret
+- 2、配置 Secret
+
+- `GITLAB_REPO_URL` 仓库 oauth2 地址
+- `WECOM_WEBHOOK_KEY` 企业微信 webhook key
+- `MENTION_MOBILE_LIST` 企业微信@人员手机号（可不填）
+- `PGYER_API_KEY` 蒲公英 api 上传 key
+- `CODE_SIGNING_IDENTITY` code-signing-identity (IOS)
+- `TEAM_ID` 证书 TEAM ID （IOS）
+
+IOS 需要额外配置:
+
+代码文件下放对应证书 `p12` 和 `mobileprovision`
 
 ```yaml
-env:
-  GITLAB_REPO_URL: ${{ secrets.GITLAB_REPO_URL }}
-  WECOM_WEBHOOK_KEY: ${{ secrets.WECOM_WEBHOOK_KEY }}
-  MENTION_MOBILE_LIST: ${{ secrets.MENTION_MOBILE_LIST }}
+with:
+  project-path: ios/app.xcodeproj #工程文件名
+  workspace-path: ios/app.xcworkspace #工程工作空间文件名
+  p12-path: ios/app.p12
+  mobileprovision-path: ios/app.mobileprovision
 ```
 
-另外还有蒲公英 `PGYER_API_KEY` Secret
-
-- 4、修改 `manually-build-android.yml` 和 `manually-build-ios.yml` 中 `https://www.pgyer.com/xxxx` 为APP对应的url
-
+- 4、修改 `manually-build-android.yml` 和 `manually-build-ios.yml` 中 `https://www.pgyer.com/xxxx` 为 APP 对应的 url 地址（消息推送时用）
 
 ## 其他
 
