@@ -23,6 +23,9 @@ env:
 
 另外还有蒲公英 `PGYER_API_KEY` Secret
 
+- 4、修改 `manually-build-android.yml` 和 `manually-build-ios.yml` 中 `https://www.pgyer.com/xxxx` 为APP对应的url
+
+
 ## 其他
 
 实现总结文章：[GitHub Actions 实现 RN App 自动化构建并推送到蒲公英](https://github.com/giscafer/blog/issues/53)
