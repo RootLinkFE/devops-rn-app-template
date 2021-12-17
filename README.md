@@ -11,7 +11,8 @@
 ## 使用
 
 - 1、通过模板的方式引用此模板创建工程
-- 2、配置 Secret
+- 2、修改 ./checkout.sh 文件内工程名称`rn-app` 为自己项目工程名称
+- 3、配置 Secret
 
 - `GITLAB_REPO_URL` 仓库 oauth2 地址
 - `WECOM_WEBHOOK_KEY` 企业微信 webhook key
@@ -28,8 +29,8 @@ IOS 需要额外配置:
 with:
   project-path: ios/app.xcodeproj #工程文件名
   workspace-path: ios/app.xcworkspace #工程工作空间文件名
-  p12-path: ios/app.p12
-  mobileprovision-path: ios/app.mobileprovision
+  p12-path: ios/app.p12 # 证书p12文件
+  mobileprovision-path: ios/app.mobileprovision # 证书描述文件
 ```
 
 - 4、修改 `manually-build-android.yml` 和 `manually-build-ios.yml` 中 `https://www.pgyer.com/xxxx` 为 APP 对应的 url 地址（消息推送时用）
